@@ -16,7 +16,6 @@ remove_action('wp_head','wp_generator');
  *
  */
 function logo_widget_init() {
-
     register_sidebar( array(
         'name'          => 'Header Logo SVG',
         'id'            => 'logo',
@@ -25,7 +24,6 @@ function logo_widget_init() {
         'before_title'  => '',
         'after_title'   => '',
     ) );
-
 }
 add_action( 'widgets_init', 'logo_widget_init' );
 ?>
