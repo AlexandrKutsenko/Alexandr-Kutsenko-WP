@@ -1,44 +1,54 @@
 <?php get_header(); ?>
+
 <section id="about" class="s_about bg_light">
     <div class="section_header">
-        <h2>Обо мне</h2>
+        <h2><?php echo get_cat_name( 2 ) ?></h2>
         <div class="s_descr_wrap">
-            <div class="s_descr">Познакомимся ближе</div>
+            <div class="s_descr"><?php echo category_description( 2 ); ?> </div>
         </div>
     </div>
     <div class="section_content">
         <div class="container">
             <div class="row">
+
+                <?php if ( have_posts() ) : query_posts('p=7');
+                    while (have_posts()) : the_post(); ?>
                 <div class="col-md-4 col-md-push-4 animation_1">
                     <h3>Фото</h3>
                     <div class="person">
-                        <a href="<?php echo get_template_directory_uri(); ?>/img/photo.jpg" class="popup"><img src="<?php echo get_template_directory_uri(); ?>/img/photo.jpg" alt="Alt" /></a>
+                        <?php if (has_post_thumbnail()) : ?>
+                        <a class="popup" href="<?php
+                        $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
+                        echo  $large_image_url[0];
+                        ?>" >
+                            <?php the_post_thumbnail(array(220, 220)); ?>
+                        </a>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <div class="col-md-4 col-md-pull-4 animation_2">
-                    <h3>Немного о себе</h3>
-                    <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
-                    <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.</p>
+                    <h3><?php the_title(); ?></h3>
+                    <?php the_content(); ?>
                 </div>
-                <div class="col-md-4 animation_3 personal_last_block">
-                    <h3>Персональная информация</h3>
-                    <h2 class="personal_header">Александр Куценко</h2>
-                    <ul>
-                        <li>Профессиональное создание сайтов: HTML верстка, посадка на CMS WordPress</li>
-                        <li>День рождения: 18 февраля 1991 года</li>
-                        <li>Номер телефона: +34 662 69 33 16</li>
-                        <li>E-mail: <a href="mailto:accauamoro@gmail.com">accauamoro@gmail.com</a></li>
-                        <li>Веб-сайт: <a href="AlexandrKutsenko.com" target="_blank">AlexandrKutsenko.com</a></li>
-                    </ul>
-                    <div class="social_wrap">
-                        <ul>
-                            <li><a href="https://twitter.com/AlexKutsenkoff" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
-                            <li><a href="https://www.instagram.com/alexandr_kutsenko_/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                            <li><a href="https://www.facebook.com/alexandr.kutsenko.148" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-                            <li><a href="https://github.com/AlexandrKutsenko" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
+                <?php endwhile; endif; wp_reset_query(); ?>
+
+
+                        <div class="col-md-4 animation_3 personal_last_block">
+                            <?php if ( have_posts() ) : query_posts('p=11');
+                                while (have_posts()) : the_post(); ?>
+                            <h3><?php the_title(); ?></h3>
+                            <h2 class="personal_header"><?php echo get_bloginfo('name'); ?></h2>
+                            <?php the_content(); ?>
+                            <?php endwhile; endif; wp_reset_query(); ?>
+                            <div class="social_wrap">
+                                <ul>
+                                    <?php if ( have_posts() ) : query_posts('cat=3');
+                                        while (have_posts()) : the_post(); ?>
+                                            <li><a href="<?php echo get_post_meta($post->ID, 'soc_url', true); ?>" target="_blank" title="<?php the_title(); ?>"><i class="fa <?php echo get_post_meta($post->ID, 'fonts_awesome', true); ?>" aria-hidden="true"></i></a></li>
+                                        <?php endwhile; endif; wp_reset_query(); ?>
+                                </ul>
+                            </div>
+                        </div>
             </div>
         </div>
     </div>
