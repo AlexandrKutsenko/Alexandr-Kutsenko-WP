@@ -5,10 +5,10 @@
                 &copy; 2018 Александр Куценко
                 <div class="social_wrap">
                     <ul>
-                        <li><a href="https://twitter.com/AlexKutsenkoff" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
-                        <li><a href="https://www.instagram.com/alexandr_kutsenko_/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                        <li><a href="https://www.facebook.com/alexandr.kutsenko.148" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-                        <li><a href="https://github.com/AlexandrKutsenko" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i></a></li>
+                        <?php if ( have_posts() ) : query_posts('cat=3');
+                            while (have_posts()) : the_post(); ?>
+                                <li><a href="<?php echo get_post_meta($post->ID, 'soc_url', true); ?>" target="_blank" title="<?php the_title(); ?>"><i class="fa <?php echo get_post_meta($post->ID, 'fonts_awesome', true); ?>" aria-hidden="true"></i></a></li>
+                            <?php endwhile; endif; wp_reset_query(); ?>
                     </ul>
                 </div>
             </div>
