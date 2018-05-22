@@ -33,7 +33,6 @@
 <script src="<?php echo get_template_directory_uri(); ?>/libs/animate/animate-css.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/libs/jqBootstrapValidation/jqBootstrapValidation.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/common.js"></script>
-<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 <!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
 <!-- Google Analytics counter --><!-- /Google Analytics counter -->
 

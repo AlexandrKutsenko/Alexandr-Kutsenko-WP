@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="499b4114-42e9-496a-b58a-7663feec535c" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/MyTheme/css/main.css" afterPath="$PROJECT_DIR$/wp-content/themes/MyTheme/css/main.css" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/MyTheme/footer.php" afterPath="$PROJECT_DIR$/wp-content/themes/MyTheme/footer.php" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/MyTheme/index.php" afterPath="$PROJECT_DIR$/wp-content/themes/MyTheme/index.php" />
     </list>
@@ -17,10 +18,10 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/MyTheme/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="132" column="91" lean-forward="false" selection-start-line="132" selection-start-column="91" selection-end-line="132" selection-end-column="91" />
+            <state relative-caret-position="208">
+              <caret line="137" column="47" lean-forward="false" selection-start-line="137" selection-start-column="47" selection-end-line="137" selection-end-column="47" />
               <folding>
-                <marker date="1526955932351" expanded="true" signature="6263:6302" ph="..." />
+                <marker date="1526959271903" expanded="true" signature="6319:6358" ph="..." />
               </folding>
             </state>
           </provider>
@@ -29,7 +30,7 @@
       <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/MyTheme/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-22">
+            <state relative-caret-position="1210">
               <caret line="54" column="24" lean-forward="false" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="59" />
               <folding>
                 <marker date="1526922223070" expanded="true" signature="1334:1352" ph="..." />
@@ -41,8 +42,8 @@
       <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/MyTheme/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+            <state relative-caret-position="264">
+              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -51,18 +52,8 @@
       <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/MyTheme/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-9">
+            <state relative-caret-position="252">
               <caret line="29" column="19" lean-forward="false" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/MyTheme/Style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-9">
-              <caret line="1" column="19" lean-forward="false" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -74,6 +65,7 @@
     <findStrings>
       <find>img/</find>
       <find>img</find>
+      <find>.portfolio_</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -88,6 +80,7 @@
         <option value="$PROJECT_DIR$/wp-content/themes/MyTheme/functions.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/MyTheme/footer.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/MyTheme/index.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/MyTheme/css/main.css" />
       </list>
     </option>
   </component>
@@ -150,7 +143,7 @@
               <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="MyTheme" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="libs" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Alexandr-Kutsenko-Portfolio- WP-tutorial" type="b2602c69:ProjectViewProjectNode" />
@@ -198,12 +191,12 @@
       <option name="presentableId" value="Default" />
       <updated>1526897895482</updated>
       <workItem from="1526897896553" duration="602000" />
-      <workItem from="1526908302461" duration="25575000" />
+      <workItem from="1526908302461" duration="28303000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26177000" />
+    <option name="totallyTimeSpent" value="28905000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1915" height="509" extended-state="0" />
@@ -240,14 +233,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/MyTheme/Style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="1" column="19" lean-forward="false" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/twentyfifteen/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -288,9 +273,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/MyTheme/Style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="19" lean-forward="false" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/MyTheme/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/MyTheme/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
+        <state relative-caret-position="252">
           <caret line="29" column="19" lean-forward="false" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
           <folding />
         </state>
@@ -298,7 +299,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/MyTheme/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-22">
+        <state relative-caret-position="1210">
           <caret line="54" column="24" lean-forward="false" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="59" />
           <folding>
             <marker date="1526922223070" expanded="true" signature="1334:1352" ph="..." />
@@ -306,20 +307,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/MyTheme/footer.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/MyTheme/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+        <state relative-caret-position="255">
+          <caret line="65" column="20" lean-forward="false" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/MyTheme/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="132" column="91" lean-forward="false" selection-start-line="132" selection-start-column="91" selection-end-line="132" selection-end-column="91" />
+        <state relative-caret-position="208">
+          <caret line="137" column="47" lean-forward="false" selection-start-line="137" selection-start-column="47" selection-end-line="137" selection-end-column="47" />
           <folding>
-            <marker date="1526955932351" expanded="true" signature="6263:6302" ph="..." />
+            <marker date="1526959271903" expanded="true" signature="6319:6358" ph="..." />
           </folding>
         </state>
       </provider>

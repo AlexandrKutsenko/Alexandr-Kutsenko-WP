@@ -56,14 +56,14 @@ section {
     text-transform: uppercase;
     font-size: 12px;
     position: relative;
-    margin-bottom: 130px;
+    margin-bottom: 100px;
     font-weight: 600; }
     .s_descr_wrap .s_descr::after {
       content: "";
       height: 1px;
       left: 50%;
       margin-left: -75px;
-      margin-top: 60px;
+      margin-top: 30px;
       position: absolute;
       width: 150px; }
 
@@ -373,11 +373,17 @@ svg path {
 .s_portfolio ul {
   margin-bottom: 50px; }
 
+#portfolio_grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 .portfolio_item {
   display: none;
   padding: 0; }
   .portfolio_item img {
-    width: 100%; }
+    width: 100%;
+    height: auto; }
   .portfolio_item .port_item_cont {
     position: absolute;
     top: 0;

@@ -83,7 +83,8 @@
                                             <strong><?php the_title(); ?></strong></div>
                                         <?php the_content(); ?>
                                     </div>
-                                <?php endwhile; endif; wp_reset_query(); ?>
+                                <?php endwhile; endif;
+                            wp_reset_query(); ?>
                         </div>
 
                         <div class="col-md-6 col-sm-6 right">
@@ -98,7 +99,8 @@
                                         </div>
                                         <?php the_content(); ?>
                                     </div>
-                                <?php endwhile; endif; wp_reset_query(); ?>
+                                <?php endwhile; endif;
+                            wp_reset_query(); ?>
                         </div>
                     </div>
 
@@ -127,13 +129,20 @@
                     </div>
                     <div id="portfolio_grid">
 
-                        <?php if ( have_posts() ) : query_posts('cat=7');
+                        <?php if (have_posts()) : query_posts('cat=7');
                             while (have_posts()) : the_post(); ?>
-                                <div class="mix col-md-3 col-sm-6 col-xs-12 portfolio_item category-1">
-                                    <img src="<?php the_post_thumbnail(array(800, 600)); ?>
+                                <div class="mix col-md-3 col-sm-6 col-xs-12 portfolio_item <?php
+                                $tags = wp_get_post_tags($post->ID);
+                                if ($tags) {
+                                    foreach($tags as $tag) {
+                                        echo ' ' . $tag->name;
+                                    }
+                                }
+                                ?>">
+                                    <?php the_post_thumbnail(array(400, 300)); ?>
                                     <div class="port_item_cont">
                                         <h3><?php the_title(); ?></h3>
-                                        <?php the_content(); ?>
+                                        <?php the_excerpt(); ?>
                                         <a href="#" class="popup_content">Посмотреть</a>
                                     </div>
                                     <div class="hidden">
@@ -152,8 +161,8 @@
                                     </div>
                                 </div>
 
-                            <?php endwhile; endif; wp_reset_query(); ?>
-
+                            <?php endwhile; endif;
+                        wp_reset_query(); ?>
 
 
                     </div>
