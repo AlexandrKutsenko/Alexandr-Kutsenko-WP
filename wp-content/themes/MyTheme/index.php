@@ -2,7 +2,11 @@
 
     <section id="about" class="s_about bg_light">
         <div class="section_header">
-            <h2><?php echo get_cat_name(2); ?></h2>
+            <h2><?php
+                $idObj = get_category_by_slug('s_about');
+                $id = $idObj->term_id;
+                echo get_cat_name($id);
+                ?></h2>
             <div class="s_descr_wrap">
                 <div class="s_descr"><?php echo category_description(2); ?> </div>
             </div>
@@ -62,7 +66,11 @@
 
     <section id="resume" class="s_resume">
         <div class="section_header">
-            <h2><?php echo get_cat_name(4); ?></h2>
+            <h2><?php
+                $idObj = get_category_by_slug('s_resume');
+                $id = $idObj->term_id;
+                echo get_cat_name($id);
+                ?></h2>
             <div class="s_descr_wrap">
                 <div class="s_descr"><?php echo category_description(4); ?></div>
             </div>
@@ -73,7 +81,11 @@
                     <div class="resume_container">
 
                         <div class="col-md-6 col-sm-6 left">
-                            <h3><?php echo get_cat_name(5); ?></h3>
+                            <h3><?php
+                                $idObj = get_category_by_slug('s_work');
+                                $id = $idObj->term_id;
+                                echo get_cat_name($id);
+                                ?></h3>
                             <div class="resume_icon"><i class="fa fa-briefcase" aria-hidden="true"></i></div>
                             <?php if (have_posts()) : query_posts('cat=5');
                                 while (have_posts()) : the_post(); ?>
@@ -88,7 +100,11 @@
                         </div>
 
                         <div class="col-md-6 col-sm-6 right">
-                            <h3><?php echo get_cat_name(6); ?></h3>
+                            <h3><?php
+                                $idObj = get_category_by_slug('s_study');
+                                $id = $idObj->term_id;
+                                echo get_cat_name($id);
+                                ?></h3>
                             <div class="resume_icon"><i class="fa fa-graduation-cap" aria-hidden="true"></i></div>
                             <?php if (have_posts()) : query_posts('cat=6');
                                 while (have_posts()) : the_post(); ?>
@@ -111,7 +127,11 @@
 
     <section id="portfolio" class="s_portfolio bg_dark">
         <div class="section_header">
-            <h2><?php echo get_cat_name(7); ?></h2>
+            <h2><?php
+                $idObj = get_category_by_slug('s_portfolio');
+                $id = $idObj->term_id;
+                echo get_cat_name($id);
+                ?></h2>
             <div class="s_descr_wrap">
                 <div class="s_descr"><?php echo category_description(7); ?></div>
             </div>
@@ -173,9 +193,13 @@
 
     <section id="contacts" class="s_contacts bg_light">
         <div class="section_header">
-            <h2>Контакты</h2>
+            <h2><?php
+                $idObj = get_category_by_slug('s_contacts');
+                $id = $idObj->term_id;
+                echo get_cat_name($id);
+                ?></h2>
             <div class="s_descr_wrap">
-                <div class="s_descr">Оставьте ваше сообщение</div>
+                <div class="s_descr"><?php echo category_description(11); ?></div>
             </div>
         </div>
         <div class="section_content">
@@ -186,18 +210,22 @@
                             <div class="contacts_icon"><i class="fa fa-map-marker" aria-hidden="true"></i>
                             </div>
                             <h3>Адрес:</h3>
-                            <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.</p>
+                            <p><?php $options = get_option('sample_theme_options');
+                                echo $options['address']; ?></p>
                         </div>
                         <div class="contact_box">
                             <div class="contacts_icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
                             <h3>Телефон:</h3>
-                            <p>+34 662 69 33 16</p>
+                            <p><?php $options = get_option('sample_theme_options');
+                                echo $options['phonetext']; ?></p>
                         </div>
                         <div class="contact_box">
                             <div class="contacts_icon"><i class="fa fa-home" aria-hidden="true"></i>
                             </div>
                             <h3>Веб-сайт:</h3>
-                            <p><a href="AlexandrKutsenko.com" target="_blank">AlexandrKutsenko.com</a></p>
+                            <p><a href="<?php $options = get_option('sample_theme_options');
+                                echo $options['website']; ?>" target="_blank"><?php $options = get_option('sample_theme_options');
+                                    echo $options['website']; ?></a></p>
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-6">

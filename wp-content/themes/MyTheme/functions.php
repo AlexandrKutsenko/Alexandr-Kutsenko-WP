@@ -11,6 +11,8 @@ remove_action('wp_head','rsd_link');
 remove_action('wp_head','wlwmanifest_link');
 remove_action('wp_head','wp_generator');
 
+require_once ( get_stylesheet_directory() . '/theme-options.php' );
+
 /**
  * Register our sidebars and widgetized areas.
  *

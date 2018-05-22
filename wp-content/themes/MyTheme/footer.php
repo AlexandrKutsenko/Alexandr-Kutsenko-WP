@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                &copy; 2018 Александр Куценко
+                &copy; <?php echo date("Y"); ?> <?php echo  get_bloginfo('name'); ?>
                 <div class="social_wrap">
                     <ul>
                         <?php if ( have_posts() ) : query_posts('cat=3');
